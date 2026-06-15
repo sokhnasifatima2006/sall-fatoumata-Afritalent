@@ -1,16 +1,272 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afritalent</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarifs — AfriTalent</title>
+  <script>(function(){var t=localStorage.getItem('afritalent-theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    <h1>Bienvenue</h1>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="navbar navbar-expand-lg" aria-label="Navigation principale">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Afri<span>Talent</span></a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Menu">
+      <i class="bi bi-list fs-3" style="color:#fff"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+        <li class="nav-item"><a class="nav-link active" href="tarifs.html">Tarifs</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+        <button id="darkModeToggle" aria-label="Mode sombre"><i class="bi bi-moon-fill"></i></button>
+        <a href="freelances.html" class="nav-link btn-nav">Rejoindre</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header style="background-color:#1A1A2E !important; padding:9rem 0 4rem; position:relative; overflow:hidden;" aria-label="En-tête page">
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at 70% 50%,rgba(232,93,4,.15) 0%,transparent 58%);pointer-events:none;"></div>
+  <div class="container text-center" style="position:relative;z-index:1;">
+    <h1 style="font-family:'Bebas Neue','Arial Black',sans-serif;color:#fff;font-size:clamp(2.4rem,6vw,4.8rem);">Plans &amp; <span>Tarification</span></h1>
+    <p style="color:rgba(255,255,255,.6);font-size:1.02rem;max-width:500px;margin:.7rem auto 0;">Des plans adaptés à chaque étape de votre parcours freelance ou client</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- PLANS -->
+  <section class="sec">
+    <div class="container">
+      <div class="row g-4 align-items-stretch justify-content-center">
+
+        <!-- GRATUIT -->
+        <div class="col-lg-4 col-md-6 ".replace("  "," ").strip()>
+          <div class="price-card">
+            <div class="price-plan">Gratuit</div>
+            <div class="price-amt">0 € <span>/ mois</span></div>
+            <p class="price-desc">Pour démarrer et explorer la plateforme</p>
+            <ul class="price-feats">
+              <li><i class="bi bi-check-circle-fill"></i> Création de profil basique</li>
+              <li><i class="bi bi-check-circle-fill"></i> 3 candidatures / mois</li>
+              <li><i class="bi bi-check-circle-fill"></i> Accès au catalogue freelances</li>
+              <li><i class="bi bi-check-circle-fill"></i> Messagerie limitée (5/mois)</li>
+              <li class="off"><i class="bi bi-x-circle-fill"></i> Profil mis en avant</li>
+              <li class="off"><i class="bi bi-x-circle-fill"></i> Statistiques avancées</li>
+              <li class="off"><i class="bi bi-x-circle-fill"></i> Support prioritaire</li>
+              <li class="off"><i class="bi bi-x-circle-fill"></i> Badge vérifié</li>
+            </ul>
+            <a href="contact.html" class="btn-plan">Commencer gratuitement</a>
+          </div>
+        </div>
+
+        <!-- PRO -->
+        <div class="col-lg-4 col-md-6 ".replace("  "," ").strip()>
+          <div class="price-card pop">
+            <div class="price-badge">⭐ Populaire</div>
+            <div class="price-plan">Pro</div>
+            <div class="price-amt">29 € <span>/ mois</span></div>
+            <p class="price-desc">Pour les freelances actifs qui veulent se démarquer</p>
+            <ul class="price-feats">
+              <li><i class="bi bi-check-circle-fill"></i> Profil complet &amp; portfolio</li>
+              <li><i class="bi bi-check-circle-fill"></i> Candidatures illimitées</li>
+              <li><i class="bi bi-check-circle-fill"></i> Profil mis en avant</li>
+              <li><i class="bi bi-check-circle-fill"></i> Messagerie illimitée</li>
+              <li><i class="bi bi-check-circle-fill"></i> Statistiques de visibilité</li>
+              <li><i class="bi bi-check-circle-fill"></i> Badge vérifié AfriTalent</li>
+              <li><i class="bi bi-check-circle-fill"></i> Support prioritaire (24h)</li>
+              <li class="off"><i class="bi bi-x-circle-fill"></i> Account manager dédié</li>
+            </ul>
+            <a href="contact.html" class="btn-plan">Passer à Pro</a>
+          </div>
+        </div>
+
+        <!-- ENTREPRISE -->
+        <div class="col-lg-4 col-md-6 ".replace("  "," ").strip()>
+          <div class="price-card">
+            <div class="price-plan">Entreprise</div>
+            <div class="price-amt">99 € <span>/ mois</span></div>
+            <p class="price-desc">Pour les entreprises avec des besoins récurrents</p>
+            <ul class="price-feats">
+              <li><i class="bi bi-check-circle-fill"></i> Tout le plan Pro</li>
+              <li><i class="bi bi-check-circle-fill"></i> Jusqu'à 10 utilisateurs</li>
+              <li><i class="bi bi-check-circle-fill"></i> Account manager dédié</li>
+              <li><i class="bi bi-check-circle-fill"></i> Facturation mensuelle</li>
+              <li><i class="bi bi-check-circle-fill"></i> Contrats personnalisés</li>
+              <li><i class="bi bi-check-circle-fill"></i> API d'intégration</li>
+              <li><i class="bi bi-check-circle-fill"></i> Rapport mensuel détaillé</li>
+              <li><i class="bi bi-check-circle-fill"></i> Support 24/7 dédié</li>
+            </ul>
+            <a href="contact.html" class="btn-plan">Contacter l'équipe</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-4 ".replace("  "," ").strip()>
+        <p style="color:var(--muted);font-size:.86rem">
+          <i class="bi bi-shield-check me-1" style="color:var(--accent)"></i>
+          Paiement sécurisé · Annulation à tout moment · Sans engagement · Essai 14 jours gratuit
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" style="padding-top:0">
+    <div class="container">
+      <div class="text-center mb-5 ".replace("  "," ").strip()>
+        <h2 class="t-title">Questions <span>fréquentes</span></h2>
+        <p class="t-sub">Tout ce que vous devez savoir sur AfriTalent</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 ".replace("  "," ").strip()>
+          <div class="accordion" id="faq">
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#f1" aria-expanded="true">
+                  Comment fonctionne le paiement sécurisé ?
+                </button>
+              </h3>
+              <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  AfriTalent utilise un système d'escrow (séquestre). Les fonds sont bloqués sur notre plateforme jusqu'à validation des livrables par le client, ce qui protège les deux parties.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#f2" aria-expanded="false">
+                  Puis-je annuler mon abonnement à tout moment ?
+                </button>
+              </h3>
+              <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Oui, absolument. Annulation depuis votre espace personnel à tout moment, sans frais ni pénalité. Votre accès reste actif jusqu'à la fin de la période payée.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#f3" aria-expanded="false">
+                  AfriTalent prend-il une commission sur les missions ?
+                </button>
+              </h3>
+              <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  10% pour les comptes Gratuit, 7% pour Pro et 5% pour Entreprise. Cette commission couvre la gestion sécurisée des paiements et le support de la plateforme.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#f4" aria-expanded="false">
+                  Comment obtenir le badge "Vérifié AfriTalent" ?
+                </button>
+              </h3>
+              <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Disponible à partir du plan Pro. Notre équipe vérifie votre identité, vos compétences via un test technique et vos références. Délai : 3 à 5 jours ouvrés.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#f5" aria-expanded="false">
+                  Quels modes de paiement sont acceptés ?
+                </button>
+              </h3>
+              <div id="f5" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Cartes bancaires (Visa, Mastercard), virements SEPA, Mobile Money (Orange Money, MTN, Wave) et PayPal. Pour les abonnements Entreprise, facturation par virement mensuel.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#f6" aria-expanded="false">
+                  Y a-t-il une période d'essai pour les plans payants ?
+                </button>
+              </h3>
+              <div id="f6" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Oui ! 14 jours d'essai gratuit sur les plans Pro et Entreprise, sans carte bancaire requise. Explorez toutes les fonctionnalités premium avant de vous engager.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="ft-logo">Afri<span>Talent</span></div>
+        <p class="ft-desc">La plateforme des freelances tech africains.</p>
+        <div class="ft-social">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h4 class="ft-h">Liens</h4>
+        <ul class="ft-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="freelances.html">Freelances</a></li>
+          <li><a href="tarifs.html">Tarifs</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h4 class="ft-h">Contact</h4>
+        <ul class="ft-links">
+          <li>hello@afritalent.io</li>
+          <li>+225 07 00 00 00 00</li>
+          <li>Abidjan, CI</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="ft-hr"/>
+    <p class="ft-copy text-center">&copy; <span id="year"></span> AfriTalent. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Retour en haut"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

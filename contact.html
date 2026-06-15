@@ -1,16 +1,164 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afritalent</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — AfriTalent</title>
+  <script>(function(){var t=localStorage.getItem('afritalent-theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    <h1>Bienvenue</h1>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+<nav id="navbar" class="navbar navbar-expand-lg" aria-label="Navigation principale">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Afri<span>Talent</span></a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Menu"><i class="bi bi-list fs-3" style="color:#fff"></i></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+        <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+        <button id="darkModeToggle" aria-label="Mode sombre"><i class="bi bi-moon-fill"></i></button>
+        <a href="freelances.html" class="nav-link btn-nav">Rejoindre</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header style="background-color:#1A1A2E !important; padding:9rem 0 4rem; position:relative; overflow:hidden;" aria-label="En-tête page">
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at 70% 50%,rgba(232,93,4,.15) 0%,transparent 58%);pointer-events:none;"></div>
+  <div class="container text-center" style="position:relative;z-index:1;">
+    <h1 style="font-family:'Bebas Neue','Arial Black',sans-serif;color:#fff;font-size:clamp(2.4rem,6vw,4.8rem);"><span>Contactez</span>-nous</h1>
+    <p style="color:rgba(255,255,255,.6);font-size:1.02rem;max-width:500px;margin:.7rem auto 0;">Notre équipe répond à toutes vos questions en moins de 24h</p>
+  </div>
+</header>
+
+<main>
+  <section class="sec">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- FORMULAIRE -->
+        <div class="col-lg-7 ".replace("  "," ").strip()>
+          <div class="cf-box">
+            <h2 style="font-size:1.65rem;margin-bottom:.35rem">Envoyez-nous un message</h2>
+            <p style="color:var(--muted);margin-bottom:1.8rem;font-size:.9rem">Remplissez le formulaire et nous vous répondrons rapidement.</p>
+
+            <div id="successMessage" class="success-msg" role="alert" aria-live="polite">
+              <i class="bi bi-check-circle-fill" style="font-size:2.2rem;display:block;margin-bottom:.8rem"></i>
+              <h4 style="margin-bottom:.35rem">Message envoyé !</h4>
+              <p style="font-size:.9rem;opacity:.8">Notre équipe vous répondra dans les 24 heures.</p>
+            </div>
+
+            <form id="contactForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nom" class="form-label">Nom <span style="color:var(--red)">*</span></label>
+                  <input type="text" id="nom" name="nom" class="form-control" placeholder="Votre nom" required aria-required="true"/>
+                  <div class="invalid-feedback">Ce champ est obligatoire.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="prenom" class="form-label">Prénom <span style="color:var(--red)">*</span></label>
+                  <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Votre prénom" required aria-required="true"/>
+                  <div class="invalid-feedback">Ce champ est obligatoire.</div>
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label">Email <span style="color:var(--red)">*</span></label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="votre@email.com" required aria-required="true"/>
+                  <div class="invalid-feedback">Adresse email invalide.</div>
+                </div>
+                <div class="col-12">
+                  <label for="sujet" class="form-label">Sujet <span style="color:var(--red)">*</span></label>
+                  <select id="sujet" name="sujet" class="form-select" required aria-required="true">
+                    <option value="">Choisissez un sujet…</option>
+                    <option value="inscription">Inscription / Compte</option>
+                    <option value="mission">Proposer une mission</option>
+                    <option value="freelance">Devenir freelance</option>
+                    <option value="facturation">Facturation &amp; paiement</option>
+                    <option value="technique">Problème technique</option>
+                    <option value="partenariat">Partenariat</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                  <div class="invalid-feedback">Veuillez choisir un sujet.</div>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message <span style="color:var(--red)">*</span></label>
+                  <textarea id="message" name="message" class="form-control" rows="5" placeholder="Décrivez votre demande (20 caractères minimum)…" required aria-required="true"></textarea>
+                  <div class="invalid-feedback">Le message doit contenir au moins 20 caractères.</div>
+                </div>
+                <div class="col-12 mt-1">
+                  <button type="submit" class="btn-send"><i class="bi bi-send-fill me-2"></i>Envoyer le message</button>
+                  <p style="font-size:.76rem;color:var(--muted);margin-top:.6rem"><i class="bi bi-shield-lock me-1"></i>Vos données sont protégées et ne seront jamais partagées.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- INFOS -->
+        <div class="col-lg-5 ".replace("  "," ").strip()>
+          <div class="ci-box">
+            <h3 style="color:#fff;margin-bottom:.35rem;font-size:1.4rem">Nos coordonnées</h3>
+            <p style="color:rgba(255,255,255,.38);margin-bottom:1.8rem;font-size:.86rem">Plusieurs façons de nous joindre</p>
+
+            <div class="ci-item">
+              <div class="ci-ico"><i class="bi bi-envelope-fill"></i></div>
+              <div><div class="ci-lbl">Email général</div><div class="ci-val">hello@afritalent.io</div><div class="ci-lbl" style="margin-top:.18rem">Support</div><div class="ci-val">support@afritalent.io</div></div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-ico"><i class="bi bi-telephone-fill"></i></div>
+              <div><div class="ci-lbl">Téléphone</div><div class="ci-val">+225 07 00 00 00 00</div><div class="ci-lbl" style="margin-top:.18rem">Lun–Ven 8h–18h (GMT)</div></div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-ico"><i class="bi bi-geo-alt-fill"></i></div>
+              <div><div class="ci-lbl">Adresse</div><div class="ci-val">Plateau Business Center</div><div style="font-size:.88rem;opacity:.68;color:#fff">Abidjan, Côte d'Ivoire</div></div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-ico"><i class="bi bi-clock-fill"></i></div>
+              <div><div class="ci-lbl">Horaires</div><div class="ci-val">Lundi – Vendredi</div><div style="font-size:.88rem;opacity:.68;color:#fff">08:00 – 18:00 (GMT)</div></div>
+            </div>
+
+            <div style="margin-top:1.6rem;padding-top:1.3rem;border-top:1px solid rgba(255,255,255,.1)">
+              <div style="color:rgba(255,255,255,.38);font-size:.74rem;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:.8rem">Suivez-nous</div>
+              <div class="ft-social">
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              </div>
+            </div>
+
+            <div class="map-wrap">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.0!2d-4.0244!3d5.3364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ea5311959121%3A0x3fe70ddce19221a6!2sPlateau%2C%20Abidjan!5e0!3m2!1sfr!2sci!4v1615000000000"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Localisation AfriTalent" aria-label="Carte Google Maps — Abidjan"></iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4"><div class="ft-logo">Afri<span>Talent</span></div><p class="ft-desc">La plateforme des freelances tech africains.</p><div class="ft-social"><a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></div></div>
+      <div class="col-lg-2 col-6"><h4 class="ft-h">Liens</h4><ul class="ft-links"><li><a href="index.html">Accueil</a></li><li><a href="freelances.html">Freelances</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="about.html">À propos</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="col-lg-2 col-6"><h4 class="ft-h">Contact</h4><ul class="ft-links"><li>hello@afritalent.io</li><li>+225 07 00 00 00 00</li><li>Abidjan, CI</li></ul></div>
+    </div>
+    <hr class="ft-hr"/><p class="ft-copy text-center">&copy; <span id="year"></span> AfriTalent. Tous droits réservés.</p>
+  </div>
+</footer>
+<button id="backToTop" aria-label="Retour en haut"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
