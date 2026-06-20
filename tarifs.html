@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tarifs — AfriTalent</title>
   <script>(function(){var t=localStorage.getItem('afritalent-theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
       <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
-        <button id="darkModeToggle" aria-label="Mode sombre"><i class="bi bi-moon-fill"></i></button>
+        <button type="button" id="darkModeToggle" aria-label="Mode sombre"><i class="bi bi-moon-fill"></i></button>
         <a href="freelances.html" class="nav-link btn-nav">Rejoindre Afritalent</a>
       </div>
     </div>
@@ -48,7 +48,8 @@
 <main>
 
   <!-- PLANS -->
-  <section class="sec">
+  <section class="sec" aria-labelledby="plans-heading">
+    <h2 id="plans-heading" class="visually-hidden">Nos plans tarifaires</h2>
     <div class="container">
       <div class="row g-4 align-items-stretch justify-content-center">
 
@@ -241,7 +242,7 @@
         </div>
       </div>
       <div class="col-lg-2 col-6">
-        <h4 class="ft-h">Liens</h4>
+        <h3 class="ft-h">Liens</h3>
         <ul class="ft-links">
           <li><a href="index.html">Accueil</a></li>
           <li><a href="freelances.html">Freelances</a></li>
@@ -251,7 +252,7 @@
         </ul>
       </div>
       <div class="col-lg-2 col-6">
-        <h4 class="ft-h">Contact</h4>
+        <h3 class="ft-h">Contact</h3>
         <ul class="ft-links">
           <li>hello@afritalent.sn</li>
           <li>+221 76 153 81 64</li>
@@ -259,12 +260,12 @@
         </ul>
       </div>
     </div>
-    <hr class="ft-hr"/>
+    <hr class="ft-hr">
     <p class="ft-copy text-center">&copy; <span id="year"></span> AfriTalent. Tous droits réservés.</p>
   </div>
 </footer>
 
-<button id="backToTop" aria-label="Retour en haut"><i class="bi bi-arrow-up"></i></button>
+<button type="button" id="backToTop" aria-label="Retour en haut"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
